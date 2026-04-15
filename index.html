@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f3;
+      padding: 1rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 0.5px solid rgba(0,0,0,0.12);
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .card h1 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #6b6b6b;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.65rem 1.5rem;
+      border-radius: 10px;
+      border: 0.5px solid rgba(0,0,0,0.2);
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s, border-color 0.15s;
+      flex: 1 1 140px;
+      max-width: 180px;
+      justify-content: center;
+      background: transparent;
+      color: #1a1a1a;
+    }
+
+    .btn:hover {
+      background: #f0efea;
+      border-color: rgba(0,0,0,0.3);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-config { color: #185fa5; border-color: rgba(24,95,165,0.35); }
+    .btn-config:hover { background: #e6f1fb; border-color: rgba(24,95,165,0.5); }
+
+    .btn-update { color: #0f6e56; border-color: rgba(15,110,86,0.35); }
+    .btn-update:hover { background: #e1f5ee; border-color: rgba(15,110,86,0.5); }
+
+    .btn svg { flex-shrink: 0; }
+
+    @media (max-width: 360px) {
+      .btn { max-width: 100%; flex-basis: 100%; }
+      .card { padding: 2rem 1.25rem; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #1c1c1a; }
+      .card { background: #2a2a28; border-color: rgba(255,255,255,0.1); }
+      .card h1 { color: #f0ede6; }
+      .card p { color: #9a9a95; }
+      .btn { color: #e0ddd6; border-color: rgba(255,255,255,0.18); }
+      .btn:hover { background: #38382f; }
+      .btn-config { color: #85b7eb; border-color: rgba(133,183,235,0.3); }
+      .btn-config:hover { background: #0c2a42; }
+      .btn-update { color: #5dcaa5; border-color: rgba(93,202,165,0.3); }
+      .btn-update:hover { background: #04201a; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Control panel</h1>
+    <p>Select an action below to configure settings or apply the latest updates.</p>
+    <div class="btn-group">
+      <a href="https://kentaitwds2.app.n8n.cloud/form/a5626477-08f4-4dff-a291-7eaee9d0a49f" class="btn btn-config" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="currentColor"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.44 1.5a.75.75 0 0 1 .72-.54h1.68a.75.75 0 0 1 .72.54l.26.94a5.02 5.02 0 0 1 .94.54l.93-.27a.75.75 0 0 1 .87.36l.84 1.46a.75.75 0 0 1-.14.91l-.7.62a5.1 5.1 0 0 1 0 1.08l.7.62a.75.75 0 0 1 .14.91l-.84 1.46a.75.75 0 0 1-.87.36l-.93-.27c-.29.21-.6.39-.94.54l-.26.94a.75.75 0 0 1-.72.54H7.16a.75.75 0 0 1-.72-.54l-.26-.94a5.02 5.02 0 0 1-.94-.54l-.93.27a.75.75 0 0 1-.87-.36L2.6 9.64a.75.75 0 0 1 .14-.91l.7-.62a5.1 5.1 0 0 1 0-1.08l-.7-.62a.75.75 0 0 1-.14-.91l.84-1.46a.75.75 0 0 1 .87-.36l.93.27c.29-.21.6-.39.94-.54l.26-.94zM8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" fill="currentColor"/>
+        </svg>
+        休診設定
+      </a>
+      <a href="https://kentaitwds2.app.n8n.cloud/form/0f529c8e-d237-4755-a138-20465ee6dfd6" class="btn btn-update" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2zM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8z" fill="currentColor"/>
+          <path d="M8 4.5a.75.75 0 0 1 .75.75v2.69l1.65 1.65a.75.75 0 1 1-1.06 1.06L7.47 8.78A.75.75 0 0 1 7.25 8.22V5.25A.75.75 0 0 1 8 4.5z" fill="currentColor"/>
+          <path d="M10.5 2.75a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1-.75-.75z" fill="currentColor"/>
+        </svg>
+        清空休診設定
+      </a>
+    </div>
+  </div>
+</body>
+</html>
